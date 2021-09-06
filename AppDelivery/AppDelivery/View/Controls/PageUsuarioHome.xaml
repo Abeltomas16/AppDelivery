@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             xmlns:controls="clr-namespace:AppDelivery.View.Controls"
+             mc:Ignorable="d"
+             x:Class="AppDelivery.View.Controls.PageUsuarioHome"
+             Title="Menu"
+             BackgroundImageSource="fundosecondary"
+              Shell.NavBarHasShadow="False"
+             CompressedLayout.IsHeadless="True">
+
+    <Shell.SearchHandler>
+        <controls:AnimalSearchHandler Placeholder="Marcas"
+                                      ShowsResults="true"
+                                      DisplayMemberName="nome"
+                                      SearchBoxVisibility="Collapsible">
+            <controls:AnimalSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Label 
+                               Text="{Binding nome}"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center" />
+                    </Grid>
+                </DataTemplate>
+            </controls:AnimalSearchHandler.ItemTemplate>
+        </controls:AnimalSearchHandler>
+                                       
+    </Shell.SearchHandler>
+
+    <ContentPage.Content>
+
+
+        
+        <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                     Padding="10">
+
+            <material:MaterialLabel Text="Bem vindo a TelmaFashion" 
+                                    FontAttributes="Bold" 
+                                    FontSize="Body"
+                                    TextColor="Black"/>
+            <material:MaterialLabel Text="Chegou o App X, onde você compra sem sair de casa."
+                                    FontSize="Body"
+                                    TextColor="Gray"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Novos Produtos" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                    <material:MaterialMenuButton x:Name="mm" ButtonType="Flat" HorizontalOptions="End"
+                                                 CornerRadius="24" 
+                                              MenuBackgroundColor="Red" />
+
+                </StackLayout>
+
+ 
+
+                <CollectionView ItemsSource="{Binding Produtos}" EmptyView="Nenhum produto" x:Name="collectionProdutos"   HeightRequest="200"
+                                SelectionMode="Single">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="White" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <material:MaterialCard x:Name="mateus" x:Uid="mateusss" HeightRequest="200" Elevation="2"
+                                                   Padding="5"
+                                                   WidthRequest="130"
+                                                   BackgroundColor="White">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Image Source="{Binding imgSrc}" Aspect="AspectFit" Grid.Row="0"/>
+                                    <material:MaterialLabel Text="{Binding nome}"
+                                                            HorizontalTextAlignment="Center"
+                                                            Grid.Row="1"/>
+                                        <material:MaterialLabel Text="Comprar" BackgroundColor="{DynamicResource CorAppBar}"
+                                                            Grid.Row="2" Padding="2" 
+                                                            HeightRequest="30" 
+                                                            WidthRequest="20"
+                                                            HorizontalTextAlignment="Center"
+                                                            VerticalTextAlignment="Center"
+                                                            >
+                                            <material:MaterialLabel.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                            </material:MaterialLabel.GestureRecognizers>
+                                        </material:MaterialLabel>
+                                </Grid>
+                            </material:MaterialCard>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Label Text="Sugeridos" HorizontalTextAlignment="Center"/>
+                <CollectionView ItemsSource="{Binding Produtos}" EmptyView="Nenhum produto" x:Name="collectionProdutoss"   HeightRequest="200">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <material:MaterialCard Elevation="2"
+                                                   Padding="5"
+                                                   WidthRequest="130"
+                                                   BackgroundColor="White"
+                                                   HeightRequest="200">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Image Source="{Binding imgSrc}" Aspect="AspectFit" Grid.Row="0"/>
+                                    <material:MaterialLabel Text="{Binding nome}"
+                                                            HorizontalTextAlignment="Center"
+                                                            Grid.Row="1"/>
+                                        <material:MaterialLabel Text="Comprar" BackgroundColor="{DynamicResource CorAppBar}"
+                                                            Grid.Row="2" Padding="2" 
+                                                            HeightRequest="30" 
+                                                            WidthRequest="20"
+                                                            HorizontalTextAlignment="Center"
+                                                            VerticalTextAlignment="Center"
+                                                            >
+                                            <material:MaterialLabel.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                            </material:MaterialLabel.GestureRecognizers>
+                                        </material:MaterialLabel>
+                                    </Grid>
+                            </material:MaterialCard>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+        </ContentPage.Content>
+</ContentPage>
+    
+
+
+
+

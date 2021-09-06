@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             material:MaterialNavigationPage.AppBarColor="{DynamicResource CorAppBar}" 
+             material:MaterialNavigationPage.AppBarTitleTextFontFamily="Roboto" 
+             material:MaterialNavigationPage.AppBarTitleTextFontSize="14" 
+           
+             material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+             material:MaterialNavigationPage.HasShadow="False"
+             BackgroundImageSource="fundoMain.png"
+             mc:Ignorable="d"
+             x:Class="AppDelivery.MainPage">
+    <!--material:MaterialNavigationPage.StatusBarColor="{DynamicResource CorStatusBar}"-->
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout HorizontalOptions="Center" Padding="20" VerticalOptions="CenterAndExpand">
+            <material:MaterialLabel  Text="LOGO APP" FontSize="Large" FontAttributes="Bold">
+            </material:MaterialLabel>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

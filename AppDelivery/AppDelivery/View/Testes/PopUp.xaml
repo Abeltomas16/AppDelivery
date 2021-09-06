@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppDelivery.View.Testes.PopUp"
+             Title="Popup Demo"
+             BackgroundColor="White">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#7dbbe6" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView VerticalOptions="Fill">
+        <StackLayout Spacing="20" Margin="10, 15">
+            <Button Text="Open Popup" Clicked="OnOpenPupup" />
+            <Button Text="Open User Animation Popup" Clicked="OnUserAnimationPupup" />
+            <Button Text="Open System Offset Page" Clicked="OnOpenSystemOffsetPage" />
+            <Button Text="ListView Page" Clicked="OnOpenListViewPage" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

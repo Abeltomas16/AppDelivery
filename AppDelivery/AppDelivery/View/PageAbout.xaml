@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AppDelivery"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             material:MaterialNavigationPage.AppBarColor="{DynamicResource CorAppBar}"
+             material:MaterialNavigationPage.StatusBarColor="{DynamicResource CorStatusBar}"
+             material:MaterialNavigationPage.HasShadow="False"
+             material:MaterialNavigationPage.AppBarTitleTextFontFamily="Roboto" 
+             material:MaterialNavigationPage.AppBarTitleTextFontSize="14" 
+             material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+             Title="Sobre"
+             mc:Ignorable="d"
+             x:Class="AppDelivery.View.PageAbout"
+             BackgroundImageSource="fundoMain">
+    <ContentPage.Content>
+        <StackLayout Padding="20,10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="APP X" FontSize="Title" HorizontalTextAlignment="Center" TextColor="Gray" FontAttributes="Bold"/>
+            <local:CustomLabel Text="App X é um aplicativo de encomendas, monitorado pela NIZ - Angola e pode ser usado por qualquer entidade, desde que obedeça os termos de contrato do App e da entidade que o detém."
+                   FontFamily="Roboto"
+                   FontSize="Caption" TextColor="Gray" LineBreakMode="WordWrap"/>
+            <local:CustomLabel Text="Aqui o cliente faz os seus pedidos sem sair de casa e tudo é entregue conforme o pedido foi feito"
+                        FontFamily="Roboto"
+                         FontSize="Caption" TextColor="Gray" LineBreakMode="WordWrap"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

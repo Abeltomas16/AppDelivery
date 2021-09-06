@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             material:MaterialNavigationPage.AppBarColor="{DynamicResource CorAppBar}"
+             material:MaterialNavigationPage.HasShadow="False"
+             mc:Ignorable="d"
+             x:Class="AppDelivery.View.PageDois"
+             BackgroundImageSource="fundoMain">
+    <ContentPage.Content>
+        <StackLayout   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <material:MaterialButton x:Name="btnEntrar" Clicked="btnEntrar_Clicked" BackgroundColor="{DynamicResource CorAppBar}" Text="Entrar" CornerRadius="5" ButtonType="Flat" WidthRequest="220"/>
+            <material:MaterialButton x:Name="btnSObre" Clicked="btnSObre_Clicked" BackgroundColor="{DynamicResource CorAppBar}" Text="Sobre" CornerRadius="5" ButtonType="Flat" WidthRequest="220"/>
+            <Label LineBreakMode="NoWrap" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Já tens conta? " TextColor="Gray"/>
+                        <Span Text="Cria Conta" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
