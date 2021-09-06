@@ -57,8 +57,12 @@
 
  
 
-                <CollectionView ItemsSource="{Binding Produtos}" EmptyView="Nenhum produto" x:Name="collectionProdutos"   HeightRequest="200"
-                                SelectionMode="Single">
+                <CollectionView ItemsSource="{Binding Produtos}" 
+                                EmptyView="Nenhum produto" 
+                                x:Name="collectionProdutos"   
+                                HeightRequest="200"
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedProduto}">
 
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="1" Orientation="Horizontal"/>
@@ -89,8 +93,8 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <Image Source="{Binding imgSrc}" Aspect="AspectFit" Grid.Row="0"/>
-                                    <material:MaterialLabel Text="{Binding nome}"
+                                        <Image Source="{Binding ImgSrc}" Aspect="AspectFit" Grid.Row="0"/>
+                                    <material:MaterialLabel Text="{Binding Descricao}"
                                                             HorizontalTextAlignment="Center"
                                                             Grid.Row="1"/>
                                         <material:MaterialLabel Text="Comprar" BackgroundColor="{DynamicResource CorAppBar}"
@@ -134,8 +138,8 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <Image Source="{Binding imgSrc}" Aspect="AspectFit" Grid.Row="0"/>
-                                    <material:MaterialLabel Text="{Binding nome}"
+                                        <Image Source="{Binding ImgSrc}" Aspect="AspectFit" Grid.Row="0"/>
+                                        <material:MaterialLabel Text="{Binding Descricao}"
                                                             HorizontalTextAlignment="Center"
                                                             Grid.Row="1"/>
                                         <material:MaterialLabel Text="Comprar" BackgroundColor="{DynamicResource CorAppBar}"

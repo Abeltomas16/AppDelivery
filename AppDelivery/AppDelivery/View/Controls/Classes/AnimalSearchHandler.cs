@@ -10,13 +10,9 @@ namespace AppDelivery.View.Controls
 {
     public class AnimalSearchHandler : SearchHandler
     { 
-
-      
         protected override void OnQueryChanged(string oldValue, string newValue)
         {
             base.OnQueryChanged(oldValue, newValue);
-
-
             if (string.IsNullOrWhiteSpace(newValue))
             {
                 ItemsSource = null;
@@ -35,7 +31,6 @@ namespace AppDelivery.View.Controls
             List<ProdutoDto> produtos = new List<ProdutoDto>();
             produtos.Add((item as ProdutoDto));
             faz.novo(produtos);
-
         }
     }
 }

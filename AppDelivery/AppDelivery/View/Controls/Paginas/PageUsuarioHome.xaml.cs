@@ -23,16 +23,7 @@ namespace AppDelivery.View.Controls
             InitializeComponent();
             Produt produt = new Produt();
             collectionProdutos.BindingContext = produt;
-            collectionProdutoss.BindingContext = produt;
-
-            List<string> nomes = new List<string>()
-            {
-                "Abel",
-                "Joao"
-            };
-            mm.Choices = nomes;
-          
-
+            collectionProdutoss.BindingContext = produt;     
         }
 
 
