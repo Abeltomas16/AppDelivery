@@ -29,10 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\Controls\PageCadastro.xaml">
+    <EmbeddedResource Update="View\Controls\Paginas\PageCadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Controls\PageUsuarioHome.xaml">
+    <EmbeddedResource Update="View\Controls\Paginas\PageUsuarioHome.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Testes\Graficos.xaml">

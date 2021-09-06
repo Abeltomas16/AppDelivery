@@ -1,4 +1,5 @@
-﻿using AppDelivery.View.Controls;
+﻿using AppDelivery.Models;
+using AppDelivery.View.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,7 @@ namespace AppDelivery.ViewModel
 {
     public class Produt
     {
-        public ObservableCollection<Produtos> Produtos { get => faz.Produtos; }
+        public ObservableCollection<ProdutoDto> Produtos { get => faz.Produtos; }
         public List<string> Actions { get; set; }
 
         public ICommand MenuCommand => new Command(chama);

@@ -13,15 +13,15 @@
              CompressedLayout.IsHeadless="True">
 
     <Shell.SearchHandler>
-        <controls:AnimalSearchHandler Placeholder="Marcas"
+        <controls:AnimalSearchHandler Placeholder="Produtos"
                                       ShowsResults="true"
-                                      DisplayMemberName="nome"
+                                      DisplayMemberName="Descricao"
                                       SearchBoxVisibility="Collapsible">
             <controls:AnimalSearchHandler.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">
                         <Label 
-                               Text="{Binding nome}"
+                               Text="{Binding Descricao}"
                                FontAttributes="Bold"
                                VerticalOptions="Center" />
                     </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDelivery.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,16 @@ namespace AppDelivery.View.Controls
             else
             {
                 ItemsSource = faz.Produtos
-                    .Where(p => p.nome.ToLower().Contains(newValue.ToLower()))
-                    .ToList<Produtos>();
+                    .Where(p => p.Descricao.ToLower().Contains(newValue.ToLower()))
+                    .ToList<ProdutoDto>();
             }
         }
         protected override  void OnItemSelected(object item)
         {
             base.OnItemSelected(item);
 
-            List<Produtos> produtos = new List<Produtos>();
-            produtos.Add((item as Produtos));
+            List<ProdutoDto> produtos = new List<ProdutoDto>();
+            produtos.Add((item as ProdutoDto));
             faz.novo(produtos);
 
         }
