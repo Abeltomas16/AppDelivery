@@ -5,10 +5,9 @@ using System.Text;
 namespace AppDelivery.Models
 {
     public class ProdutoDto : BaseModelo
-
     {
         public int Qtde { get; set; }
         public decimal Preco { get; set; }
-        public int Total { get; set; }
+        public CategoriaDto Categoria { get; set; }
     }
 }

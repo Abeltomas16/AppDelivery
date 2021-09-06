@@ -4,8 +4,10 @@ using System.Text;
 
 namespace AppDelivery.Models
 {
-    public class clienteDto : BaseModelo
+    public class ClienteDto : BaseModelo
     {
-        public int redeSocial { get; set; }
+        public string telefone { get; set; }
+        public enderecoDto endereco { get; set; }
+        public string email { get; set; }
     }
 }

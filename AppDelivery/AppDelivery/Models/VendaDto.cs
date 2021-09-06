@@ -4,11 +4,9 @@ using System.Text;
 
 namespace AppDelivery.Models
 {
-    public class VendaDto : BaseModelo
-
+    public class VendaDto
     {
-        public int IDCliente { get; set; }
-        public int IDUsuario { get; set; }
+        public ClienteDto IDCliente { get; set; }
+        public ICollection<ProdutoDto> produtos { get; set; }
     }
-
 }

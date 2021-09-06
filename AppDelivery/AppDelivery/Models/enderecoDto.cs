@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AppDelivery.Models
 {
-    public class RuaDto : BaseModelo
+    public class enderecoDto : Municipi­oDto
     {
+        public BairroDto Bairro { get; set; }
     }
 }
